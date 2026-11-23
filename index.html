@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rust</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Seguridad de memoria sin recolector de basura: cómo maneja la memoria cada lenguaje, el ownership y los préstamos de Rust, sus tipos, su concurrencia sin miedo y WebAssembly, con visualizadores de la memoria línea a línea.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html"><b>Rust</b></a><span class="eyebrow">Curso visual e interactivo · Desarrollo de software</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Desarrollo de software</span>
+  <h1>La memoria segura sin recolector de basura</h1>
+  <p class="lede">Cerca del 70 % de las fallas de seguridad graves en programas grandes escritos en C y C++ vienen de errores de memoria. Rust los convierte en errores de compilación con una idea nueva: cada valor tiene un solo dueño. Este curso explica cómo maneja la memoria un programa, por qué Rust la maneja distinto y cómo se escribe código con él.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 11 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para quien ya programa en otro lenguaje y quiere entender qué pasa con la memoria por debajo, o escribir herramientas, sistemas o código que corra en el navegador con WebAssembly. Conviene conocer funciones, tipos y estructuras de datos básicas; no hace falta saber C.</p>
+    <p><b>Cómo está hecho.</b> Un mismo programa recorre el curso: un analizador de registros (*logs*) que lee un archivo, convierte cada línea en un tipo, maneja los errores con `Result`, procesa en paralelo y termina compilado a WebAssembly, corriendo dentro de la página. Los laboratorios muestran la pila, el montículo y el dueño de cada valor mientras el código avanza.</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> Por qué Rust</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="por-que-rust"><span class="n">01</span><b>Por qué Rust: los errores de memoria de C y C++</b><p>De un ascensor que fallaba por un error de software a Mozilla, Linux, Android y Windows: el lenguaje que no deja compilar los errores clásicos.</p></div>
+    <div class="mod soon" data-id="memoria"><span class="n">02</span><b>La memoria de un programa: pila, montículo y recolección</b><p>Dónde vive cada valor, quién lo libera y las tres respuestas: a mano, con recolector o con un dueño.</p></div>
+    <div class="mod soon" data-id="herramientas"><span class="n">03</span><b>Herramientas: rustup, cargo y compañía</b><p>Un instalador, un gestor de proyectos y un linter que enseña: el ecosistema que hizo amable a un lenguaje difícil.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> Ownership</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="ownership"><span class="n">04</span><b>Ownership y movimientos</b><p>Un solo dueño por valor, que se mueve al asignarlo y se libera al salir de alcance.</p></div>
+    <div class="mod soon" data-id="prestamos-y-lifetimes"><span class="n">05</span><b>Préstamos, lifetimes y punteros inteligentes</b><p>Muchos lectores o un solo escritor, referencias que no viven más que su dueño, y `Box`, `Rc` y `RefCell` para lo demás.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> Modelar con tipos</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="structs-y-enums"><span class="n">06</span><b>Structs, enums y *pattern matching*</b><p>Enums que llevan datos, un `match` que obliga a cubrir cada caso, y `Option` en lugar del puntero nulo.</p></div>
+    <div class="mod soon" data-id="traits-y-genericos"><span class="n">07</span><b>Traits, genéricos, closures e iteradores</b><p>Comportamiento compartido sin herencia, genéricos sin costo en ejecución e iteradores que se encadenan.</p></div>
+    <div class="mod soon" data-id="errores"><span class="n">08</span><b>Errores con `Result` y el operador `?`</b><p>Errores recuperables con `Result`, irrecuperables con `panic!`, y `?` para propagarlos sin ruido.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> Rust en el mundo</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="concurrencia"><span class="n">09</span><b>Concurrencia sin miedo</b><p>Hilos, canales y async con Tokio, con un compilador que rechaza las carreras de datos.</p></div>
+    <div class="mod soon" data-id="webassembly"><span class="n">10</span><b>Rust en la web: WebAssembly</b><p>Un formato binario que corre en el navegador a velocidad casi nativa, y Rust como su lenguaje favorito.</p></div>
+    <div class="mod soon" data-id="unsafe-y-ffi"><span class="n">11</span><b>`unsafe`, FFI y cuándo elegir Rust</b><p>Las cinco cosas que solo se pueden hacer con `unsafe`, cómo llamar a C y cuándo Rust vale su curva de aprendizaje.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/rust" target="_blank" rel="noopener">github.com/aaramirez/rust</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
