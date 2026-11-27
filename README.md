@@ -9,7 +9,7 @@ Este repositorio solo tiene el sitio generado. El curso está en preparación: l
 | # | Capítulo |
 |---|---|
 | 01 | Por qué Rust: los errores de memoria de C y C++ |
-| 02 | La memoria de un programa: pila, montículo y recolección |
+| 02 | Por qué Rust no necesita recolector |
 | 03 | Herramientas: rustup, cargo y compañía |
 | 04 | Ownership y movimientos |
 | 05 | Préstamos, lifetimes y punteros inteligentes |

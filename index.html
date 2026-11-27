@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rust</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Seguridad de memoria sin recolector de basura: cómo maneja la memoria cada lenguaje, el ownership y los préstamos de Rust, sus tipos, su concurrencia sin miedo y WebAssembly, con visualizadores de la memoria línea a línea.">
+<meta name="description" content="Seguridad de memoria sin recolector de basura: por qué no necesita recolector, el ownership y los préstamos de Rust, sus tipos, su concurrencia sin miedo y WebAssembly, con visualizadores de la memoria línea a línea.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
@@ -32,14 +32,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="hero">
   <span class="eyebrow">Curso visual e interactivo · Desarrollo de software</span>
   <h1>La memoria segura sin recolector de basura</h1>
-  <p class="lede">Cerca del 70 % de las fallas de seguridad graves en programas grandes escritos en C y C++ vienen de errores de memoria. Rust los convierte en errores de compilación con una idea nueva: cada valor tiene un solo dueño. Este curso explica cómo maneja la memoria un programa, por qué Rust la maneja distinto y cómo se escribe código con él.</p>
+  <p class="lede">Cerca del 70 % de las fallas de seguridad graves en programas grandes escritos en C y C++ vienen de errores de memoria. Rust los convierte en errores de compilación con una idea nueva: cada valor tiene un solo dueño. Este curso explica por qué Rust maneja la memoria distinto y cómo se escribe código con él.</p>
 </header>
 
 <section>
   <h2>Cómo usar este curso</h2>
   <div class="prose">
     <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 11 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
-    <p><b>Para quién es.</b> Para quien ya programa en otro lenguaje y quiere entender qué pasa con la memoria por debajo, o escribir herramientas, sistemas o código que corra en el navegador con WebAssembly. Conviene conocer funciones, tipos y estructuras de datos básicas; no hace falta saber C.</p>
+    <p><b>Para quién es.</b> Para quien ya programa en otro lenguaje y quiere entender qué pasa con la memoria por debajo, o escribir herramientas, sistemas o código que corra en el navegador con WebAssembly. Conviene conocer funciones, tipos y estructuras de datos básicas, que están en Fundamentos de programación; no hace falta saber C.</p>
     <p><b>Cómo está hecho.</b> Un mismo programa recorre el curso: un analizador de registros (*logs*) que lee un archivo, convierte cada línea en un tipo, maneja los errores con `Result`, procesa en paralelo y termina compilado a WebAssembly, corriendo dentro de la página. Los laboratorios muestran la pila, el montículo y el dueño de cada valor mientras el código avanza.</p>
   </div>
 </section>
@@ -53,7 +53,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> Por qué Rust</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
   <div class="mods">
     <div class="mod soon" data-id="por-que-rust"><span class="n">01</span><b>Por qué Rust: los errores de memoria de C y C++</b><p>De un ascensor que fallaba por un error de software a Mozilla, Linux, Android y Windows: el lenguaje que no deja compilar los errores clásicos.</p></div>
-    <div class="mod soon" data-id="memoria"><span class="n">02</span><b>La memoria de un programa: pila, montículo y recolección</b><p>Dónde vive cada valor, quién lo libera y las tres respuestas: a mano, con recolector o con un dueño.</p></div>
+    <div class="mod soon" data-id="memoria"><span class="n">02</span><b>Por qué Rust no necesita recolector</b><p>Quién libera la memoria en cada lenguaje y la respuesta de Rust: liberarla cuando su dueño sale de alcance, sin `free` y sin pausas.</p></div>
     <div class="mod soon" data-id="herramientas"><span class="n">03</span><b>Herramientas: rustup, cargo y compañía</b><p>Un instalador, un gestor de proyectos y un linter que enseña: el ecosistema que hizo amable a un lenguaje difícil.</p></div>
   </div>
 </details>
